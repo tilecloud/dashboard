@@ -9,6 +9,7 @@ import APIKey from "./Maps/APIKey";
 
 import GeoJsons from "./Data/GeoJsons";
 import GeoJson from "./Data/GeoJson";
+import AddressInput from "./address-input";
 
 import General from "./Team/general";
 import Members from "./Team/members";
@@ -31,6 +32,7 @@ function Router(props: Props) {
 
       <Route exact path="/data/geojson" component={GeoJsons} />
       <Route exact path="/data/geojson/:id" component={GeoJson} />
+      <Route exact path="/address-input/" component={AddressInput} />
 
       <Route exact path="/team/general" component={General} />
       <Route exact path="/team/members" component={Members} />

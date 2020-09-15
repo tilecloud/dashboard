@@ -18,8 +18,8 @@ type Props = {
 };
 
 type State = {
-  map: mapboxgl.Map
-}
+  map: mapboxgl.Map;
+};
 
 class Map extends React.Component<Props, State> {
   style: React.CSSProperties = {};
@@ -53,15 +53,15 @@ class Map extends React.Component<Props, State> {
     const map = new geolonia.Map(this.container.current);
     this.props.onAfterLoad(map);
 
-    this.setState({map: map})
+    this.setState({ map: map });
   }
 
   componentDidUpdate() {
     if (this.props.bounds) {
       this.state.map.fitBounds(this.props.bounds, {
         padding: 20,
-        maxZoom: 16,
-      })
+        maxZoom: 16
+      });
     }
   }
 

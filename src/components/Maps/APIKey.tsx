@@ -1,5 +1,4 @@
 import React from "react";
-import * as clipboard from "clipboard-polyfill";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -28,6 +27,7 @@ import { createActions as createMapKeyActions } from "../../redux/actions/map-ke
 
 // libs
 import normalizeOrigin from "../../lib/normalize-origin";
+import { copyToClipBoard } from "../../lib/clipboard";
 
 // constants
 import { messageDisplayDuration } from "../../constants";
@@ -189,14 +189,6 @@ const Content = (props: Props) => {
         }, messageDisplayDuration);
       }
     });
-  };
-
-  const copyToClipBoard = (cssSelector: string) => {
-    const input = document.querySelector(cssSelector) as HTMLInputElement;
-    if (input) {
-      input.select();
-      clipboard.writeText(input.value);
-    }
   };
 
   return (
