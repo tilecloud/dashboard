@@ -20,6 +20,7 @@ import Suspend from "./suspend";
 import RemoveMember from "./remove-member";
 import { Chip, Avatar } from "@material-ui/core";
 import Alert from "../../custom/Alert";
+import Interweave from "interweave";
 
 // utils
 import { __ } from "@wordpress/i18n";
@@ -129,19 +130,18 @@ const Content = (props: Props) => {
 
   const { team } = props;
   let isOwner = false;
-  // let isPaidTeam = false;
+  let isPaidTeam = false;
   if (team) {
     isOwner = team.role === Roles.Owner;
-    // isPaidTeam = team.isPaidTeam;
+    isPaidTeam = team.isPaidTeam;
   }
 
-  const inviteDisabled = true;
-  // NOTE: Payment feature and currently disabled
-  // !team || // Not ready
-  // !isOwner ||
-  // !isPaidTeam ||
-  // team.maxMemberLength <= members.length ||
-  // members.length === 0;
+  const inviteDisabled =
+    !team || // Not ready
+    !isOwner ||
+    !isPaidTeam ||
+    team.maxMemberLength <= members.length ||
+    members.length === 0;
 
   return (
     <div>
@@ -152,6 +152,13 @@ const Content = (props: Props) => {
             "We are in public beta version. Member features will be added soon."
           )}
         </Alert>
+        {
+          isPaidTeam || <Alert type="danger">
+              {__(
+                'You need to change your plan in order to use the member function.'
+              )}
+        </Alert>
+        }
       </Title>
 
       <Invite disabled={inviteDisabled} />
