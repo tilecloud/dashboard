@@ -46,6 +46,7 @@ type OwnProps = Record<string, never>;
 
 type StateProps = {
   session: Geolonia.Session;
+  isReady: boolean;
   geojsonId?: string;
   teamId?: string;
   isPaidTeam: boolean;
@@ -488,19 +489,20 @@ export const mapStateToProps = (
   state: Geolonia.Redux.AppState,
   ownProps: OwnProps & RouterProps
 ): StateProps => {
-  const session = state.authSupport.session;
+  const { session, isReady } = state.authSupport;
   const team = state.team.data[state.team.selectedIndex];
   if (team) {
     const { teamId } = team;
     const geojsonId = ownProps.match.params.id;
     return {
       session,
+      isReady,
       teamId,
       geojsonId,
       isPaidTeam: team.isPaidTeam
     };
   } else {
-    return { session, isPaidTeam: false };
+    return { session, isReady, isPaidTeam: false };
   }
 };
 
