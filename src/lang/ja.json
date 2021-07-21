@@ -14,21 +14,16 @@
       "Get API key then create your map!": [
         "API キーを取得して新しい地図を作成しましょう。"
       ],
-      "GeoJSON API": [""],
+      "GeoJSON API": ["GeoJSON API"],
       "Manage and style your GeoJSON.": [
         "GeoJSON を登録してスタイルをカスタマイズしましょう。"
       ],
-      "Developer's Blog": [""],
+      "Developer's Blog": ["Developer's Blog"],
       "Download GeoJSON": ["GeoJSON をダウンロード"],
-      "Home": [""],
-      "API services": ["API サービス"],
-      "You can manage and style features in your GeoJSON, and get the the access point URL of GeoJSON API.": [
-        "GeoJSON 内の地物の管理をしたりスタイルを変更することができます。さらに、GeoJSON API のアクセスポイントの URL を取得できます。"
+      "Adding your data to the map...": ["データを地図に追加しています。"],
+      "Upload your location data here to display it on a map. Once the data has been uploaded, HTML code will be generated so you can embed it in your site. We currently support uploading GeoJSON and CSV files.": [
+        "ここでは位置情報をアップロードすることができます。またWebサイトに地図を追加するための埋め込み用HTMLコードも入手できます。現在、GeoJSONまたはCSVファイルを対応しております。"
       ],
-      "Update required": ["更新が必要です"],
-      "Reload": ["読み込み"],
-      "Continue": ["このまま続ける"],
-      "Total Count of Features: %s": ["%s 件のデータ"],
       "Once you delete an Dataset, there is no going back. Please be certain.": [
         "一度データセットを削除するともとに戻すことはできません。"
       ],
@@ -38,8 +33,10 @@
       "Please type delete to confirm.": [
         "確認のために delete と入力してください。"
       ],
+      "Home": ["Home"],
+      "API services": ["API サービス"],
       "Error: Please upload GeoJSON file less than %d MB.": [
-        "エラー: 5 MB 以下の GeoJSON ファイルをアップロードしてください。"
+        "エラー: %d MB 以下の GeoJSON ファイルをアップロードしてください。"
       ],
       "Import GeoJSON": ["GeoJSON をインポート"],
       "Import GeoJSON from your computer.": [
@@ -57,21 +54,44 @@
       "Error: The `id` of each `fueature` must be unique in the GeoJSON.": [
         "エラー: それぞれの `feature` の `id` は GeoJSON の中で一意である必要があります。"
       ],
+      "Name": ["名前"],
+      "Name of public GeoJSON will be displayed in public.": [
+        "公開されているGeoJSONの名前が表示されます。"
+      ],
       "Public features will be displayed publicly and anyone can download this features without API key.": [
         "Public のデータは一般に公開され、だれでも API キー無しでダウンロードすることができます。"
       ],
       "Datasets are published now.": ["データセットは公開されています。"],
       "Datasets status are draft now.": ["データセットは下書きの状態です。"],
-      "Name": ["名前"],
-      "Name of public GeoJSON will be displayed in public.": [
-        "公開されているGeoJSONの名前が表示されます。"
+      "Access allowed URLs": ["アクセスを許可したURL"],
+      "Please enter a URL to allow access to the map. To specify multiple URLs, insert a new line after each URL.": [
+        "地図の表示を許可するURLを入力してください。複数のURLを指定するには、各URLの後に改行を挿入してください。"
       ],
-      "Download": ["GeoJSON をダウンロード"],
-      "Or": ["または"],
-      "Copy endpoint URL to clipboard": [
-        "エンドポイント URL をクリップボードにコピー"
+      "URLs": ["URL のリスト"],
+      "Only requests that come from the URLs specified here will be allowed.": [
+        "ここで指定したURLからのリクエストのみが許可されます。"
       ],
-      "Network Error.": ["通信エラー。"],
+      "Any page in a specific URL:": ["指定された URL 以下のすべてのページ:"],
+      "Any subdomain:": ["すべてのサブドメイン:"],
+      "A URL with a non-standard port:": ["一般的ではないポート:"],
+      "Note: Wild card (*) will be matched to a-z, A-Z, 0-9, \"-\", \"_\".": [
+        "備考: ワイルドカード (*) は、a-z, A-Z, 0-9, \"-\", \"_\" のいずれかと一致します。"
+      ],
+      "Add the map to your site": ["ウェブサイトに地図を追加しましょう"],
+      "Step 1": ["ステップ 1"],
+      "Include the following code before closing tag of the <code>&lt;body /&gt;</code> in your HTML file. <br/> Please replace YOUR-API-KEY to your API key. If you don't have one, create it from <a href='#/api-keys'>API keys</a> page.": [
+        "<code>&lt;body /&gt;</code> の終了タグ直前に以下のコードを挿入してください。<code>YOUR-API-KEY</code> はご自身のAPIキーに置き換えてください。APIキーを未作成の場合は、<a href='#/api-keys'>API keys</a> より作成して下さい。"
+      ],
+      "Step 2": ["ステップ 2"],
+      "Click following button and get HTML code where you want to place the map.": [
+        "以下のボタンをクリックして地図を表示したい場所の HTML を取得してください。"
+      ],
+      "Get HTML": ["HTML を取得"],
+      "Step 3": ["ステップ 3"],
+      "Adjust the element size.": [
+        "地図を表示する要素のサイズを調整して下さい。"
+      ],
+      "Copy to Clipboard": ["クリップボードにコピー"],
       "Network error.": ["通信エラー。"],
       "GeoJSON API is an API service specialized for location data. Register various location information data such as stores and real estate informations that you have.": [
         "GeoJSON API は、位置情報に特化した API サービスです。 みなさんがお持ちの店舗情報や不動産情報などのデータを登録しましょう。"
@@ -81,23 +101,36 @@
         "新しいデータセットの名前を入力してください。"
       ],
       "My dataset": ["データセット"],
-      "Small": ["小サイズ"],
-      "Medium": ["中サイズ"],
-      "Large": ["大サイズ"],
-      "Title": ["タイトル"],
+      "Network Error.": ["通信エラー。"],
+      "Error: The file you selected was too big. Please upload a file less than %d MB.": [
+        "エラー: %d MB 以下のファイルをアップロードしてください。"
+      ],
+      "Drop file to add your map.": [
+        "地図に追加するファイルをドロップして下さい。"
+      ],
+      "Upload a file from your computer.": [
+        "ファイルをアップロードしましょう。"
+      ],
+      "Drag and drop a file here to add your map, or click to choose your file.": [
+        "地図に追加するファイルをドラッグ&ドロップしてください。クリックするとファイルを選択してアップロードすることが出来ます。"
+      ],
+      "Failed to add your data. Your GeoJSON might be invalid format.": [
+        "データの追加に失敗しました。GeoJSONが無効なフォーマットである可能性があります。"
+      ],
+      "Error: Can not upload file. Please contact to customer support at https://geolonia.com/contact/": [
+        "ファイルをアップロードできません。https://geolonia.com/contact/ からカスタマーサポートに連絡してください。"
+      ],
+      "Error: Can not upload multiple files.": [
+        "複数のファイルをアップロードできません。"
+      ],
+      "Error: We currently support GeoJSON and CSV files. Please try uploading again.": [
+        "エラー: 現在 GeoJSON または CSV ファイルのみ対応しています。ファイルをご確認の上、もう一度アップロードを試してください。"
+      ],
+      "Upload Data (GeoJSON / CSV)": ["データのアップロード (GeoJSON / CSV)"],
+      "Data that has already been uploaded will be overwritten.": [
+        "既にアップロードされているデータが上書きされます。"
+      ],
       "Description": ["説明"],
-      "Style": ["スタイル"],
-      "Key": ["キー"],
-      "Value": ["値"],
-      "Nothing found.": ["なにもありません。"],
-      "Background": ["背景色"],
-      "Stroke": ["線の色"],
-      "Size": ["サイズ"],
-      "Symbol": ["シンボル"],
-      "Stroke Width": ["線の太さ"],
-      "Text Color": ["文字色"],
-      "Text Halo Color": ["文字の輪郭色"],
-      "URLs": ["URL のリスト"],
       "URLs will be used for an HTTP referrer to restrict the URLs that can use an API key.": [
         "URL のリストは、API キーが意図しない URL から使用されないように制限するために、HTTP リファラーに対して使用されます。"
       ],
@@ -129,12 +162,6 @@
       "Configure access control for your API key and Get the HTML code for your map.": [
         "API キーのアクセスコントロールを設定して、地図を設置するための HTML コードを取得しましょう。"
       ],
-      "Any page in a specific URL:": ["指定された URL 以下のすべてのページ:"],
-      "Any subdomain:": ["すべてのサブドメイン:"],
-      "A URL with a non-standard port:": ["一般的ではないポート:"],
-      "Note: Wild card (*) will be matched to a-z, A-Z, 0-9, \"-\", \"_\".": [
-        "備考: ワイルドカード (*) は、a-z, A-Z, 0-9, \"-\", \"_\" のいずれかと一致します。"
-      ],
       "Once you delete an API, there is no going back. Please be certain.": [
         "API キーを一度削除したらもとに戻すことはできません。よく確認して実行してください。"
       ],
@@ -142,21 +169,9 @@
         "この API キーを本当に削除しますか？"
       ],
       "Your API Key": ["あなたの API キー"],
-      "Add the map to your site": ["ウェブサイトに地図を追加しましょう"],
-      "Step 1": ["ステップ 1"],
       "Include the following code before closing tag of the <code>&lt;body /&gt;</code> in your HTML file.": [
         "<code>&lt;body /&gt;</code> の終了タグ直前に以下のコードを挿入してください。"
       ],
-      "Step 2": ["ステップ 2"],
-      "Click following button and get HTML code where you want to place the map.": [
-        "以下のボタンをクリックして地図を表示したい場所の HTML を取得してください。"
-      ],
-      "Get HTML": ["HTML を取得"],
-      "Step 3": ["ステップ 3"],
-      "Adjust the element size.": [
-        "地図を表示する要素のサイズを調整して下さい。"
-      ],
-      "Copy to Clipboard": ["クリップボードにコピー"],
       "(No date)": ["(データなし)"],
       "You need an API key to display map. Get an API key.": [
         "地図を表示するには API キーが必要です。 API キーを取得してください。"
@@ -165,14 +180,14 @@
       "Please enter the name of new API key.": [
         "新しいチームの名前を入力してください。"
       ],
-      "My API": [""],
-      "My team": [""],
-      "Manage API keys": ["API キー の管理"],
-      "API Services": ["API サービス"],
-      "Team Settings": ["チーム設定"],
+      "My API": ["API キー"],
+      "My team": ["My team"],
       "General": ["一般"],
       "Members": ["メンバー"],
       "Billing": ["支払い"],
+      "Manage API keys": ["API キー の管理"],
+      "API Services": ["API サービス"],
+      "Team Settings": ["チーム設定"],
       "Documentation": ["ドキュメント"],
       "Official Documents": ["公式ドキュメント"],
       "Dashboard": ["ダッシュボード"],
@@ -226,9 +241,7 @@
       "By signing up to Geolonia, you agree to our <a href=\"https://geolonia.com/terms\" class=\"MuiTypography-colorPrimary\">Terms of service</a> and <a class=\"MuiTypography-colorPrimary\" href=\"https://geolonia.com/privacy\">Privacy policy</a>.": [
         "サインアップすることで、私たちの <a href=\"https://geolonia.com/terms\" class=\"MuiTypography-colorPrimary\">利用規約</a> 及び <a class=\"MuiTypography-colorPrimary\" href=\"https://geolonia.com/privacy\">プライバシーポリシー</a> に同意したものとさせていただきます。"
       ],
-      "Pro plan": ["Pro プラン"],
-      "monthly": ["月払い"],
-      "yearly": ["年払い"],
+      "Free plan": ["Free プラン"],
       "Free Plan": ["Free プラン"],
       "Team settings": ["チーム設定"],
       "You can see subscriptions for this team in this month.": [
@@ -247,7 +260,6 @@
         "プラン詳細については、料金ページをご覧ください。"
       ],
       "Payment history": ["支払い履歴"],
-      "Free plan": ["Free プラン"],
       "No payment history.": ["支払い履歴はありません。"],
       "Card information": ["クレジットカード情報"],
       "Update": ["更新"],
@@ -272,7 +284,7 @@
       "Once you delete a team, there is no going back. Please be certain. ": [
         "一度チームを削除するともとに戻すことはできません。"
       ],
-      "URL": [""],
+      "URL": ["URL"],
       "All users on the Geolonia service belong to one of the teams, and a team with the same name as the user is automatically generated when you sign up. You can switch teams in the pull-down menu at the top left of the sidebar.": [
         "すべてのユーザーはいずれかのチームに所属しており、サインアップ時にユーザー名と同じ名前をもつチームが自動的に生成されます。チームの切り替えは、サイドバーの左上にあるプルダウンで行うことができます。"
       ],
@@ -295,8 +307,8 @@
       "You can manage members in your team.": [
         "チームメンバーの管理ができます。"
       ],
-      "We are in public beta version. Member features will be added soon.": [
-        "現在は公開β版です。メンバー機能は後ほど追加されます。"
+      "You currently can not invite any new members. To invite more than one member to your team, please upgrade to the Geolonia Pro (2-5 users) plan.": [
+        "現在、新しいメンバーを招待することはできません。メンバーをチームに招待するには、Geolonia Pro（2～5ユーザー）プランにアップグレードしてください。"
       ],
       "Suspended": ["一時停止"],
       "rows per page": ["表示する個数"],
@@ -304,7 +316,7 @@
       "Remove from team": ["チームから削除"],
       "Successfully send invitation.": ["チームへの招待が送信されました。"],
       "Failed to send invitation.": ["招待の送信に失敗しました。"],
-      "They is already a member of this team.": [
+      "That user is already a member of this team.": [
         "すでにメンバーになっています。"
       ],
       "The maximum number of members has been reached.": [
@@ -315,9 +327,6 @@
       ],
       "Invite": ["招待"],
       "Send an invitation": ["招待する"],
-      "We automatically update your billing as your invitation is accepted.": [
-        "チームメンバーの招待に伴う料金変更は自動的に行われます。"
-      ],
       "Email": ["メールアドレス"],
       "Send": ["送信"],
       "The following members will be removed:": [
@@ -344,7 +353,7 @@
       "name": ["ユーザー名"],
       "text": ["テキスト"],
       "Some error.": ["何かのエラーです。"],
-      "%s - %s of %s": [""],
+      "%1$s - %2$s / %3$s": ["%1$s - %2$s / %3$s"],
       "first page": ["最初のページ"],
       "previous page": ["前のページ"],
       "next page": ["次のページ"],
@@ -424,8 +433,6 @@
       "User not found. Please check entered username or email. If you use email, perhaps the email is not verified.": [
         "ユーザーが見つかりませんでした。ユーザー名またはメールアドレスを確認してください。メールアドレスが認証されていない可能性があります。"
       ],
-      "Default value of latitude for map\u00040": ["35.65810422222222"],
-      "Default value of longitude for map\u00040": ["139.74135747222223"],
       "Default value of zoom level of map\u00040": ["6"]
     }
   }
